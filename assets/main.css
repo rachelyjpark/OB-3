@@ -1,21 +1,21 @@
 body {
-  height: 100vh;
-
-  background:#E3C080;
+  height: 50vh;
+  width: 100vh;
+  background:#C5D2D0;
   margin: 10%;
 }
-
-  .background {
-  background-color: #244A75;
+.background {
+  background-color: #E3C080;
   position: fixed;
-  top: 100%;
-  right: 0;
-  height: 150vh;
+top: 0;
+  bottom: 0;
+right: 0;
+  height: 250vh;
   width: 15%;
   border-left: 6px solid black;
   display: block;
   text-decoration: none;
-  transform: rotate(90deg);
+
 }
 
 
@@ -28,7 +28,7 @@ body {
   color: white;
   font-family: helvetica;
   font-size: 20px;
-
+  padding-right: 30%;
 }
 
 .text-2 {
@@ -40,13 +40,19 @@ display: flex;
   color: white;
   font-family: helvetica;
   font-size: 20px;
-
+padding-right: 20%;
 }
 
 
-
+@media only screen and (min-width: 600px) {
+body {
+  height: 150vh;
+  width: 100vh;
+  background:#C5D2D0;
+  margin: 10%;
+}
+  
 @media only screen and (min-width: 800px) {
-
 .text-1 {
   position: relative;
   top: 50px;
@@ -56,31 +62,62 @@ display: flex;
   color: white;
   font-family: helvetica;
   font-size: 30px;
+
+
 }
+
+@media only screen and (min-width: 600px) {
 .text-2 {
     position: relative;
-  top: 450px;
+  top: 400px;
+left: 5%;
 display: flex;
    justify-content: center;
   text-align: center;
   color: white;
   font-family: helvetica;
  font-size: 30px;
+ 
+
 }
-  .background {
-  background-color: #244A75;
+
+@media only screen and (min-width: 600px) {
+
+#error {
   position: relative;
-  bottom: 0;
-  right: 0;
-  height: 290.8vh;
-  width: 15%;
-  border-left: 6px solid black;
-  display: block;
-  text-decoration: none;
-  transform: rotate(90deg);
+  top: 850px;
+  left: -100px;
+  font-size: 60px;
+    text-decoration: line-through 2px red;
+      animation-name: error;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes error {
+  0% {
+        letter-spacing: 1px;
+    color: red;
+  }
+  25% {
+        letter-spacing: 3px;
+    color: transparent;
+  }
+  50% {
+    letter-spacing: 5px;
+    color: red;
+  }
+  75% {
+        letter-spacing: 3px;
+    color: transparent;
+  }
+  100% {
+        letter-spacing: 1px;
+    color: red;
+  }
 }
 
 
 
-}
 
